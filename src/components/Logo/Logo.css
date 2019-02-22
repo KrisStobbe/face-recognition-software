@@ -1,0 +1,11 @@
+.Tilt {
+	background: linear-gradient(89deg, #FF5EDF 0%, #04C8DE 100%);
+	justify-content: center;
+}
+
+.logoChange{
+	height: 100%;
+	width: 100%;
+	padding-top:'5px';
+	padding-left: '5px';
+}
