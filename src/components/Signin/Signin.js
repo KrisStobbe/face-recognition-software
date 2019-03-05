@@ -51,6 +51,7 @@ class Signin extends React.Component {
                   name="email-address"
                   id="email-address"
                   onChange={this.onEmailChange}
+                  required
                 />
               </div>
               <div className="mv3">
@@ -61,6 +62,7 @@ class Signin extends React.Component {
                   name="password"
                   id="password"
                   onChange={this.onPasswordChange}
+                  required
                 />
               </div>
             </fieldset>

@@ -17,23 +17,16 @@ const app = new Clarifai.App({
 const particlesOptions = {
   particles: {
     number: {
-      value: 30,
+      value: 40,
       density: {
         enable: true,
-        value_area: 800
+        value_area:750
       }
     }
   }
 }
 
 const initialState = {
-  
-}
-
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
       input: '',
       imageUrl: '',
       box: {},
@@ -46,7 +39,12 @@ class App extends Component {
         entries: 0,
         joined: ''
       }
-    }
+  }
+
+class App extends Component {
+  constructor() {
+    super();
+    this.state = initialState;
   }
 
   loadUser = (data) => {
@@ -99,6 +97,7 @@ class App extends Component {
             .then(count => {
               this.setState(Object.assign(this.state.user, { entries: count}))
             })
+            .catch(console.log)
 
         }
         this.displayFaceBox(this.calculateFaceLocation(response))
